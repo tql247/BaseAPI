@@ -16,6 +16,11 @@ router.use('/sendgps', sensor);
 const model = require('./model');
 router.use('/model', model);
 
+const user = require('./user');
+router.use('/user', user);
+
+
+
 
 
 module.exports = router;

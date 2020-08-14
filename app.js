@@ -10,7 +10,7 @@ var Routering = require('./routes/index')
 // var logger = require('morgan') #4
 const { notfoundapi, errorHandler } = require('@utils/errorHandler')
 
-const PORT = 5000
+const PORT = 4000
 // const PORT = process.env.PORT || 5000
 
 var app = express()
