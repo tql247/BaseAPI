@@ -1,7 +1,7 @@
-// const relation = require('./relation');
-// const { generateAuthToken, findByCredentials } = require('./method');
+const { generateAuthToken, findByCredentials } = require('./method');
 const { BaseModel } = require('../basemodel');
 const { knex } = require('../../knex');
+const relation = require('./relation');
 
 
 // Give the knex instance to objection.
@@ -14,8 +14,7 @@ class Mytest1 extends BaseModel {
   }
 
   static get relationMappings() {
-    // return relation(Mytest1);
-    return
+    return relation(Mytest1);
   }
 }
 

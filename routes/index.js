@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+// var request = require('request')
 
 // check status
 router.get('/', (req, res, ext) => {
