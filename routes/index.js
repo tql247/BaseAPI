@@ -19,10 +19,12 @@ router.get('/', (req, res, ext) => {
 
 router.post('/linhtqapi', (req, res, ext) => {
     console.log(req.body)
-    message = {
-        mess: "OK~"
+
+    var message = {
+      mess: `Thanks for request`
     }
-    res.send(message)    // res.sendFile(path.join(__dirname + '/public/index.html')) 
+  
+    res.send(message)  // res.sendFile(path.join(__dirname + '/public/index.html')) 
 })
 
 const sensor = require('./mobile');
