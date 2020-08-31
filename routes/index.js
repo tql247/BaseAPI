@@ -1,14 +1,19 @@
 var express = require('express');
 var router = express.Router();
+var path = require('path')
 // var request = require('request')
 
 // check status
 router.get('/', (req, res, ext) => {
     // console.log(req)
-    message = {
-        mess: "OK~"
-    }
-    res.send(message)    // res.sendFile(path.join(__dirname + '/public/index.html')) 
+    // message = {
+    //     mess: path.join(__dirname + '../public/')
+    // }
+    // res.send(message)    //
+    // res.render('index', { title: 'Hey', message: 'Hello there!'});
+    // res.sendFile('../public/index.html', { root: __dirname})
+    // res.se
+    res.sendFile('index.html', { root: path.join(__dirname, '../public') });
 })
 
 
