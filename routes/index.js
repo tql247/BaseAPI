@@ -4,6 +4,16 @@ var router = express.Router();
 
 // check status
 router.get('/', (req, res, ext) => {
+    // console.log(req)
+    message = {
+        mess: "OK~"
+    }
+    res.send(message)    // res.sendFile(path.join(__dirname + '/public/index.html')) 
+})
+
+
+router.post('/linhtqapi', (req, res, ext) => {
+    console.log(req.body)
     message = {
         mess: "OK~"
     }
