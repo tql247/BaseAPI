@@ -25,7 +25,6 @@ async function findByCredentials(username, password) {
       err.status = 401;
       throw err;
     }
-
     const isPasswordMatch = await checkPassword(password, user.password);
 
     if (!isPasswordMatch) {

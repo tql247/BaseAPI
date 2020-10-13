@@ -2,7 +2,6 @@ const { User } = require('@models/user')
   
 async function login({ body }) {
     const trx = await User.startTransaction();
-    
     try {
         user = await User.findByCredentials(
             body.username,
@@ -25,8 +24,6 @@ async function login({ body }) {
 
         const token = await user.generateAuthToken(trx, 'web');
         trx.commit();
-
-        console.log(user)
 
         return { user, token };
     } catch (error) {
